@@ -2,14 +2,18 @@ package qlog
 
 import (
 	"io"
+	"time"
 
 	"github.com/francoispqt/gojay"
+	"github.com/lucas-clemente/quic-go/internal/ackhandler"
 	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/lucas-clemente/quic-go/internal/wire"
 )
 
 // A Tracer records events to be exported to a qlog.
 type Tracer interface {
 	Export() error
+	SentPacket(time.Time, *wire.ExtendedHeader, *wire.AckFrame, []ackhandler.Frame)
 }
 
 type tracer struct {
@@ -47,4 +51,26 @@ func (t *tracer) Export() error {
 		return err
 	}
 	return t.w.Close()
+}
+
+func (t *tracer) SentPacket(time time.Time, hdr *wire.ExtendedHeader, ack *wire.AckFrame, frames []ackhandler.Frame) {
+	numFrames := len(frames)
+	if ack != nil {
+		numFrames++
+	}
+	fs := make([]frame, 0, numFrames)
+	if ack != nil {
+		fs = append(fs, *transformFrame(ack))
+	}
+	for _, f := range frames {
+		fs = append(fs, *transformFrame(f.Frame))
+	}
+	t.events = append(t.events, event{
+		Time: time,
+		eventDetails: eventPacketSent{
+			PacketType: getPacketType(hdr),
+			Header:     *transformHeader(hdr),
+			Frames:     fs,
+		},
+	})
 }
