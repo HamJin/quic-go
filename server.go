@@ -22,7 +22,7 @@ import (
 // packetHandler handles packets
 type packetHandler interface {
 	handlePacket(*receivedPacket)
-	io.Closer
+	shutdown()
 	destroy(error)
 	getPerspective() protocol.Perspective
 }
@@ -49,6 +49,7 @@ type quicSession interface {
 	getPerspective() protocol.Perspective
 	run() error
 	destroy(error)
+	shutdown()
 	closeForRecreating() protocol.PacketNumber
 	closeRemote(error)
 }
