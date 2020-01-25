@@ -7,9 +7,9 @@ import (
 	"os"
 	"path/filepath"
 
-	quicclients "github.com/lucas-clemente/quic-clients"
-	_ "github.com/lucas-clemente/quic-go/integrationtests/tools/testlog"
-	"github.com/lucas-clemente/quic-go/integrationtests/tools/testserver"
+	quicclients "github.com/hamjin/quic-clients"
+	_ "github.com/hamjin/quic-go/integrationtests/tools/testlog"
+	"github.com/hamjin/quic-go/integrationtests/tools/testserver"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

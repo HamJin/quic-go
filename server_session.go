@@ -3,8 +3,8 @@ package quic
 import (
 	"fmt"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"github.com/hamjin/quic-go/internal/protocol"
+	"github.com/hamjin/quic-go/internal/utils"
 )
 
 type serverSession struct {

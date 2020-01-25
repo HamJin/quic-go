@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/crypto"
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"github.com/hamjin/quic-go/internal/crypto"
+	"github.com/hamjin/quic-go/internal/handshake"
+	"github.com/hamjin/quic-go/internal/protocol"
+	"github.com/hamjin/quic-go/internal/utils"
+	"github.com/hamjin/quic-go/internal/wire"
 )
 
 // packetHandler handles packets

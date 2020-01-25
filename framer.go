@@ -3,8 +3,8 @@ package quic
 import (
 	"sync"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"github.com/hamjin/quic-go/internal/protocol"
+	"github.com/hamjin/quic-go/internal/wire"
 )
 
 type framer struct {

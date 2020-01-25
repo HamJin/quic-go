@@ -14,7 +14,7 @@ environment:
 hosts:
   quic.clemente.io: 127.0.0.1
 
-clone_folder: c:\gopath\src\github.com\lucas-clemente\quic-go
+clone_folder: c:\gopath\src\github.com\hamjin\quic-go
 
 install:
   - rmdir c:\go /s /q

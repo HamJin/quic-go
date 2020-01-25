@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/lucas-clemente/quic-go/internal/ackhandler"
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"github.com/hamjin/quic-go/internal/ackhandler"
+	"github.com/hamjin/quic-go/internal/handshake"
+	"github.com/hamjin/quic-go/internal/protocol"
+	"github.com/hamjin/quic-go/internal/wire"
 )
 
 // sentAndReceivedPacketManager is only needed until STOP_WAITING is removed

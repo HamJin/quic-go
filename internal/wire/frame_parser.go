@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/qerr"
+	"github.com/hamjin/quic-go/internal/protocol"
+	"github.com/hamjin/quic-go/qerr"
 )
 
 // ParseNextFrame parses the next frame

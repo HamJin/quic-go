@@ -6,11 +6,11 @@ import (
 	"net"
 	"time"
 
-	_ "github.com/lucas-clemente/quic-clients" // download clients
-	"github.com/lucas-clemente/quic-go"
-	"github.com/lucas-clemente/quic-go/integrationtests/tools/proxy"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/testdata"
+	_ "github.com/hamjin/quic-clients" // download clients
+	"github.com/hamjin/quic-go"
+	"github.com/hamjin/quic-go/integrationtests/tools/proxy"
+	"github.com/hamjin/quic-go/internal/protocol"
+	"github.com/hamjin/quic-go/internal/testdata"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"time"
 
-	quicproxy "github.com/lucas-clemente/quic-go/integrationtests/tools/proxy"
-	"github.com/lucas-clemente/quic-go/integrationtests/tools/testserver"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	quicproxy "github.com/hamjin/quic-go/integrationtests/tools/proxy"
+	"github.com/hamjin/quic-go/integrationtests/tools/testserver"
+	"github.com/hamjin/quic-go/internal/protocol"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
